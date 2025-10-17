@@ -8,7 +8,7 @@ from config import settings
 conn = psycopg2.connect(settings.DATABASE_URL)
 cursor = conn.cursor()
 
-categories = ["perfumaria", "artes", "esporte_lazer", "informatica_acessorios", "moveis_decoracao", "papelaria", "brinquedos", "beleza_saude"]
+categories = [ "moveis_decoracao", "papelaria"]
 
 def random_product_id():
     return ''.join(random.choices(string.hexdigits.lower(), k=32))
